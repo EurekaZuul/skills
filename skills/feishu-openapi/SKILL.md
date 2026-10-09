@@ -8,7 +8,9 @@ description: 用飞书企业自建应用的 App ID / App Secret 读写飞书知�
 ## 第一步：检查凭证
 凭证只从环境变量读取：`FEISHU_APP_ID`、`FEISHU_APP_SECRET`。先检查两者是否已设置（只判断是否为空，**不要打印值**）。
 
-**已设置**：运行 `python3 scripts/feishu.py check`，能列出知识空间就可以开始干活。
+下文的 `scripts/feishu.py` 指本 Skill 目录下的脚本（项目级安装时通常位于 `.claude/skills/feishu-openapi/scripts/feishu.py` 或 `.agents/skills/feishu-openapi/scripts/feishu.py`），请在项目根目录用该完整路径运行，这样脚本能读到项目根目录的 `.env`。
+
+**已设置**：运行 `python3 <本 Skill 目录>/scripts/feishu.py check`，能列出知识空间就可以开始干活。
 
 **未设置**：停下来，引导用户完成以下设置，完成后再运行 `check`：
 1. 在 [飞书开发者后台](https://open.feishu.cn/app) 创建「企业自建应用」。

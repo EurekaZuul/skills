@@ -4,13 +4,15 @@
 
 ## 安装
 
-需要 Node.js 22 及以上。向仓库管理员申请授权码（只读令牌），然后执行：
+需要 Node.js 22 及以上。在项目根目录执行，Skill 只装到当前项目，不会装到全局：
 
 ```bash
-GITHUB_TOKEN=<授权码> npx skills add EurekaZuul/skills --skill feishu-openapi
+npx skills add EurekaZuul/skills --skill feishu-openapi -a claude-code codex -y
 ```
 
-已有本仓库访问权限的 GitHub 用户可直接执行 `npx skills add EurekaZuul/skills`。
+装好后，Skill 文件放在项目的 `.agents/skills/feishu-openapi/`（Codex 读这里），`.claude/skills/feishu-openapi` 是指向它的链接（Claude Code 读这里）。不要加 `-g`，加了会装到全局，所有项目都会加载。
+
+仓库目前为私有，安装时需要有访问权限（本机 git 已登录 GitHub，或设置 `GITHUB_TOKEN`）。
 
 ## 目录
 
