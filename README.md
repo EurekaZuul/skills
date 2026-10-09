@@ -1,4 +1,4 @@
-# EurekaZuul Skills（私有）
+# EurekaZuul Skills
 
 适用于 Claude Code、Codex 等支持 Agent Skills 的工具。
 
@@ -11,8 +11,6 @@ npx skills add EurekaZuul/skills --skill feishu-openapi -a claude-code codex -y
 ```
 
 装好后，Skill 文件放在项目的 `.agents/skills/feishu-openapi/`（Codex 读这里），`.claude/skills/feishu-openapi` 是指向它的链接（Claude Code 读这里）。不要加 `-g`，加了会装到全局，所有项目都会加载。
-
-仓库目前为私有，安装时需要有访问权限（本机 git 已登录 GitHub，或设置 `GITHUB_TOKEN`）。
 
 ## 目录
 
